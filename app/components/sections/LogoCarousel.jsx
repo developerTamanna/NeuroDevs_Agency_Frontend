@@ -2,18 +2,17 @@
 import Image from "next/image";
 
 const logos = [
-  "https://i.ibb.co/LhhKpXvS/image.png", // React
-  "https://i.ibb.co/TxJs6Sr5/image.png", // Next.js
-  "https://i.ibb.co/wr7Z4GQS/image.png", // Node.js
-  "https://i.ibb.co/7xrNcdw0/image.png", // Express
-  "https://i.ibb.co/7xQP1ypH/image.png", // GitHub
-  "https://i.ibb.co/DDmMRrz4/image.png", // Firebase
-  "https://i.ibb.co/XZDkHng9/image.png", // MongoDB
-  "https://i.ibb.co/qFX0HQdK/image.png", // WordPress
-  "https://i.ibb.co/KjwMkSVT/image.png", // Tailwind CSS
-  "https://i.ibb.co/v6JZS2p6/image.png", // Webflow
-  "https://i.ibb.co/bcCdChG/image.png", // Shopify
-  "https://i.ibb.co/JR1w24Bs/image.png", // JavaScript
+  "/react.png",
+  "/next.png",
+  "/node.jpg",
+  "/express.png",
+  "/github.jpeg",
+  "/mongodb.png",
+  "/wordpress.png",
+  "/tailwind.webp",
+  "/tailwind.webp",
+  "/shopify.png",
+  "/javascript.webp",
 ];
 
 const LogoCarousel = () => {

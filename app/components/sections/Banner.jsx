@@ -46,10 +46,7 @@ const Banner = () => {
               className="btn bg-primary text-white px-6 py-3 sm:px-8 sm:py-3 rounded-md shadow hover:bg-secondary hover:text-white transition flex items-center gap-2 text-sm sm:text-base"
             >
               Build with Us
-              <motion.span
-                whileHover={{ x: 5 }}
-                transition={{ duration: 0.3 }}
-              >
+              <motion.span whileHover={{ x: 5 }} transition={{ duration: 0.3 }}>
                 <FaArrowRight />
               </motion.span>
             </button>
@@ -59,10 +56,7 @@ const Banner = () => {
               className="btn border border-primary text-primary hover:bg-primary hover:text-white transition flex items-center gap-2 px-6 py-3 sm:px-8 sm:py-3 rounded-md text-sm sm:text-base"
             >
               Discover Projects
-              <motion.span
-                whileHover={{ x: 5 }}
-                transition={{ duration: 0.3 }}
-              >
+              <motion.span whileHover={{ x: 5 }} transition={{ duration: 0.3 }}>
                 <FaArrowRight />
               </motion.span>
             </button>
