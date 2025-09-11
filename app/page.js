@@ -8,6 +8,7 @@ import Projects from "./components/sections/Projects";
 import Services from "./components/sections/Services";
 import Team from "./components/sections/Team";
 import WhatWeProvide from "./components/sections/WhatWeProvide";
+import Footer from "./components/core/Footer";
 
 
 
@@ -25,6 +26,7 @@ export default function Home() {
       <Projects />
       <WhatWeProvide />
       <EvaluateProject />
+      <Footer/>
     </div>
   );
 }

@@ -32,10 +32,10 @@ const Navbar = () => {
     { label: "Our Team", href: "/team" },
     { label: "Projects", href: "/projects" },
     { label: "Blog", href: "/blog" },
+    
     { label: "Contact Us", href: "/contact" },
   ];
 
-  // Services submenu items
   const servicesItems = [
     { label: "Web Design & Development", href: "/services#webdev" },
     { label: "Digital Marketing", href: "/services#marketing" },
@@ -46,19 +46,19 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300  
+      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 
         ${isSticky
           ? "backdrop-blur-md bg-white/80 dark:bg-black/60 border-b border-gray-200 dark:border-gray-700"
           : "bg-gradient-to-t from-[#E0F3FF] to-white dark:from-[#1e293b] dark:to-[#0f172a]"
-      }`}
+        }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center py-3">
         {/* Logo */}
         <Link
           href="/"
-          className="md:text-3xl text-2xl font-bold font-poppins text-[#4C5C88] dark:text-white"
+          className="flex items-center md:text-3xl text-2xl font-bold font-poppins text-[#4C5C88] dark:text-white"
         >
-          NeuroDevs
+          <img src="/neuro_logo.svg" alt="Logo" className="h-10 md:h-12" />
         </Link>
 
         {/* Desktop Menu */}
