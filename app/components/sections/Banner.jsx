@@ -17,7 +17,7 @@ const Banner = () => {
   };
 
   return (
-    <section className="pt-24 bg-gradient-to-b from-[#E0F3FF] to-white dark:from-[#1e293b] dark:to-[#0f172a] text-gray-900 dark:text-white">
+    <section className=" bg-gradient-to-b from-[#E0F3FF] to-white dark:from-[#1e293b] dark:to-[#0f172a] text-gray-900 dark:text-white">
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-20 py-12 md:py-20 flex flex-col-reverse lg:flex-row items-center justify-between gap-8">
         {/* Left Text Section */}
         <div
@@ -44,9 +44,9 @@ const Banner = () => {
             {/* Build with Us */}
             <button
               onClick={() => scrollToSection("services")}
-              className="flex items-center justify-center gap-2 
+              className="flex items-center justify-center gap-2
                px-6 py-3 rounded-lg font-medium
-               shadow-md text-white bg-[#4C5C88] 
+               shadow-md text-white bg-[#4C5C88]
                hover:bg-blue-300  hover:text-black transition-all duration-300 ease-in-out
                text-sm sm:text-base"
             >
@@ -59,10 +59,10 @@ const Banner = () => {
             {/* Discover Projects */}
             <button
               onClick={() => scrollToSection("projects")}
-              className="flex items-center justify-center gap-2 
+              className="flex items-center justify-center gap-2
                px-6 py-3 rounded-lg font-medium
                shadow-md text-white
-               bg-[#4C5C88] 
+               bg-[#4C5C88]
                hover:bg-blue-300  hover:text-black transition-all duration-300 ease-in-out
                text-sm sm:text-base"
             >
