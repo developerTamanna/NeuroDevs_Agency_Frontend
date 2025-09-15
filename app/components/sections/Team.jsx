@@ -131,7 +131,7 @@ const Team = () => {
         </div>
 
         {/* Web Experts (Slider) */}
-        <div data-aos="fade-left">
+        <div data-aos="fade-left" className="overflow-hidden">
           <Swiper
             spaceBetween={30}
             slidesPerView={1}
