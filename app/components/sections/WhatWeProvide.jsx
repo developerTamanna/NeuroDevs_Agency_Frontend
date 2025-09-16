@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React, { useEffect } from "react";
 import AOS from "aos";
@@ -27,54 +27,65 @@ const WhatWeProvide = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-[#1e1e23] text-white" id="provide">
-      <div className="max-w-7xl mx-auto px-4">
+    <section
+      className="py-20 bg-gradient-to-t from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 transition-colors relative overflow-visible"
+      id="provide"
+    >
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Title */}
-        <div className="text-center mb-12" data-aos="fade-up">
-          <h2 className="text-4xl font-bold">What we provide for website</h2>
-          <p className="pt-4 text-xl text-gray-300">
-            Our awesome digital web design solution
+        <div className="text-center mb-16" data-aos="fade-up">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
+            What We Provide for Your <span className="text-[#3B82F6]">Website</span>
+          </h2>
+          <p className="pt-4 text-xl text-gray-700 dark:text-gray-300">
+            Our awesome digital web design solutions
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-10">
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-10 relative">
           {/* Left services */}
-          <div className="flex flex-col gap-6" data-aos="fade-right">
+          <div className="flex flex-col gap-6 order-2 lg:order-1" data-aos="fade-right">
             {services.slice(0, 3).map((item, index) => (
               <div
                 key={index}
-                className="bg-[#141418] p-8 text-center rounded-xl w-72 hover:shadow-xl transition"
+                className="bg-white dark:bg-gray-800 p-6 md:p-8 text-center rounded-2xl w-72 hover:shadow-xl transition duration-300"
               >
-                <div className="text-orange-500 mb-3 flex justify-center">
+                <div className="text-[#3B82F6] mb-3 flex justify-center">
                   {item.icon}
                 </div>
-                <h3 className="font-semibold text-lg">{item.title}</h3>
-                <span className="mt-4 inline-block text-white text-xl">→</span>
+                <h3 className="font-semibold text-lg text-gray-900 dark:text-white">
+                  {item.title}
+                </h3>
+                <span className="mt-4 inline-block text-[#3B82F6] text-xl">→</span>
               </div>
             ))}
           </div>
 
-          {/* Center image */}
-          <div className="relative hidden md:block" data-aos="zoom-in">
+          {/* Center image with blur glow */}
+          <div className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 order-1 lg:order-2 flex-shrink-0 z-20" data-aos="zoom-in">
+            {/* Blue Glow */}
+            <div className="absolute inset-0 w-full h-full rounded-full bg-[#3B82F6] opacity-10 blur-3xl -z-10"></div>
             <img
-              src="https://i.ibb.co/4Rxb5bSF/image.png"
+              src="/team.jpeg"
               alt="Service Center"
-              className="w-[300px] h-[300px] rounded-full object-cover z-10 relative"
+              className="w-full h-full rounded-full object-cover shadow-2xl"
             />
           </div>
 
           {/* Right services */}
-          <div className="flex flex-col gap-6" data-aos="fade-left">
+          <div className="flex flex-col gap-6 order-3" data-aos="fade-left">
             {services.slice(3).map((item, index) => (
               <div
                 key={index}
-                className="bg-[#141418] p-8 text-center rounded-xl w-72 hover:shadow-xl transition"
+                className="bg-white dark:bg-gray-800 p-6 md:p-8 text-center rounded-2xl w-72 hover:shadow-xl transition duration-300"
               >
-                <div className="text-orange-500 mb-3 flex justify-center">
+                <div className="text-[#3B82F6] mb-3 flex justify-center">
                   {item.icon}
                 </div>
-                <h3 className="font-semibold text-lg">{item.title}</h3>
-                <span className="mt-4 inline-block text-white text-xl">→</span>
+                <h3 className="font-semibold text-lg text-gray-900 dark:text-white">
+                  {item.title}
+                </h3>
+                <span className="mt-4 inline-block text-[#3B82F6] text-xl">→</span>
               </div>
             ))}
           </div>
