@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { HiMenu, HiX } from 'react-icons/hi';
 import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -99,12 +100,13 @@ const Navbar = () => {
           </ul>
 
           {/* Dark mode toggle */}
-          <button
+          {/* <button
             onClick={() => setIsDarkMode(!isDarkMode)}
             className="text-2xl text-gray-700 dark:text-gray-300 hover:scale-110 transition"
           >
             {isDarkMode ? <MdOutlineLightMode /> : <MdOutlineDarkMode />}
-          </button>
+          </button> */}
+          <ThemeToggle></ThemeToggle>
 
           {/* CTA Button */}
           <Link href="/services">
