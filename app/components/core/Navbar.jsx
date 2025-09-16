@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
-import { HiMenu, HiX } from "react-icons/hi";
-import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import { HiMenu, HiX } from 'react-icons/hi';
+import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md';
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -15,41 +15,42 @@ const Navbar = () => {
   // Sticky navbar
   useEffect(() => {
     const handleScroll = () => setIsSticky(window.scrollY > 10);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   // Dark mode toggle
   useEffect(() => {
     const root = document.documentElement;
-    if (isDarkMode) root.classList.add("dark");
-    else root.classList.remove("dark");
+    if (isDarkMode) root.classList.add('dark');
+    else root.classList.remove('dark');
   }, [isDarkMode]);
 
   const navItems = [
-    { label: "Home", href: "/" },
-    { label: "About Us", href: "/about" },
-    { label: "Our Team", href: "/team" },
-    { label: "Projects", href: "/projects" },
-    { label: "Blog", href: "/blog" },
-    
-    { label: "Contact Us", href: "/contact" },
+    { label: 'Home', href: '/' },
+    { label: 'About Us', href: '/about' },
+    { label: 'Our Team', href: '/team' },
+    { label: 'Projects', href: '/projects' },
+    { label: 'Blog', href: '/blog' },
+
+    { label: 'Contact Us', href: '/contact' },
   ];
 
   const servicesItems = [
-    { label: "Web Design & Development", href: "/services#webdev" },
-    { label: "Digital Marketing", href: "/services#marketing" },
-    { label: "App Development", href: "/services#appdev" },
-    { label: "UI/UX Design", href: "/services#uiux" },
-    { label: "SEO Optimization", href: "/services#seo" },
+    { label: 'Web Design & Development', href: '/services/webdev' },
+    { label: 'Digital Marketing', href: '/services/marketing' },
+    { label: 'App Development', href: '/services/appdev' },
+    { label: 'UI/UX Design', href: '/services/uiux' },
+    { label: 'SEO Optimization', href: '/services/seo' },
   ];
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 
-        ${isSticky
-          ? "backdrop-blur-md bg-white/80 dark:bg-black/60 border-b border-gray-200 dark:border-gray-700"
-          : "bg-gradient-to-t from-[#E0F3FF] to-white dark:from-[#1e293b] dark:to-[#0f172a]"
+      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300
+        ${
+          isSticky
+            ? 'backdrop-blur-md bg-white/80 dark:bg-black/60 border-b border-gray-200 dark:border-gray-700'
+            : 'bg-gradient-to-t from-[#E0F3FF] to-white dark:from-[#1e293b] dark:to-[#0f172a]'
         }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center py-3">
@@ -69,7 +70,7 @@ const Navbar = () => {
                 <Link
                   href={item.href}
                   className={`hover:text-[#4C5C88] dark:hover:text-blue-300 transition ${
-                    pathname === item.href ? "font-semibold underline" : ""
+                    pathname === item.href ? 'font-semibold underline' : ''
                   }`}
                 >
                   {item.label}
@@ -142,7 +143,7 @@ const Navbar = () => {
                 <Link
                   href={item.href}
                   className={`block hover:text-[#4C5C88] dark:hover:text-blue-300 ${
-                    pathname === item.href ? "font-semibold underline" : ""
+                    pathname === item.href ? 'font-semibold underline' : ''
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
