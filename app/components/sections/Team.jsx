@@ -15,7 +15,7 @@ const teamMembers = [
   {
     name: "Jihad Alom",
     role: "Frontend Web Developer",
-    img: "/team/jihad.jpg",
+    img: "/Jihad Alom.jpg",
     linkedin: "#",
     github: "#",
     facebook: "#",
@@ -23,7 +23,7 @@ const teamMembers = [
   {
     name: "RA Danil",
     role: "Webflow Developer",
-    img: "/team/danil.jpg",
+    img: "/RA Danil.jpg",
     linkedin: "#",
     github: "#",
     facebook: "#",
@@ -39,7 +39,7 @@ const teamMembers = [
   {
     name: "Jannatul Lima",
     role: "MERN Stack Developer",
-    img: "/team/lima.jpg",
+    img: "/Jannatul Lima.jpg",
     linkedin: "#",
     github: "#",
     facebook: "#",
@@ -47,7 +47,7 @@ const teamMembers = [
   {
     name: "Purba Talukdar",
     role: "Marketing Manager",
-    img: "/team/purba.jpg",
+    img: "/Purba Talukdar.png",
     linkedin: "#",
     github: "#",
     facebook: "#",
@@ -55,7 +55,7 @@ const teamMembers = [
   {
     name: "Nusrat Fariha",
     role: "Webflow Specialist",
-    img: "/team/nusrat.jpg",
+    img: "/Nusrat Fariha.png",
     linkedin: "#",
     github: "#",
     facebook: "#",

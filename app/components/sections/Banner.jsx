@@ -46,8 +46,8 @@ const Banner = () => {
               onClick={() => scrollToSection("services")}
               className="flex items-center justify-center gap-2
                px-6 py-3 rounded-lg font-medium
-               shadow-md text-white bg-[#4C5C88]
-               hover:bg-blue-300  hover:text-black transition-all duration-300 ease-in-out
+               shadow-md text-white bg-blue-500
+              hover:bg-blue-700  hover:text-white transition-all duration-300 ease-in-out
                text-sm sm:text-base"
             >
               Build with Us
@@ -62,8 +62,8 @@ const Banner = () => {
               className="flex items-center justify-center gap-2
                px-6 py-3 rounded-lg font-medium
                shadow-md text-white
-               bg-[#4C5C88]
-               hover:bg-blue-300  hover:text-black transition-all duration-300 ease-in-out
+               bg-blue-500
+               hover:bg-blue-700  hover:text-white transition-all duration-300 ease-in-out
                text-sm sm:text-base"
             >
               Discover Projects
