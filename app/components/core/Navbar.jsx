@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import { FaChevronDown } from 'react-icons/fa'; // dropdown icon
 import { HiMenu, HiX } from 'react-icons/hi';
 import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md';
 import ThemeToggle from './ThemeToggle';
@@ -12,6 +13,7 @@ const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false); // dropdown state
 
   // Sticky navbar
   useEffect(() => {
@@ -79,23 +81,29 @@ const Navbar = () => {
                   </Link>
                 </li>
               ) : (
-                // Services Dropdown
-                <li key="services" className="relative group cursor-pointer">
-                  <span className="hover:text-[#4C5C88] dark:hover:text-blue-300">
-                    Services
-                  </span>
-                  <ul className="absolute hidden group-hover:block hover:block top-full mt-2 bg-white dark:bg-gray-800 shadow-lg rounded w-56 p-2 z-50">
-                    {servicesItems.map((service) => (
-                      <li key={service.href}>
-                        <Link
-                          href={service.href}
-                          className="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
-                        >
-                          {service.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+                // Services Dropdown (Click to open)
+                <li key="services" className="relative">
+                  <button
+                    onClick={() => setIsServicesOpen(!isServicesOpen)}
+                    className="flex items-center gap-1 hover:text-[#4C5C88] dark:hover:text-blue-300"
+                  >
+                    Services <FaChevronDown className="text-xs" />
+                  </button>
+                  {isServicesOpen && (
+                    <ul className="absolute top-full mt-2 bg-white dark:bg-gray-800 shadow-lg rounded w-56 p-2 z-50">
+                      {servicesItems.map((service) => (
+                        <li key={service.href}>
+                          <Link
+                            href={service.href}
+                            className="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                            onClick={() => setIsServicesOpen(false)} // close after click
+                          >
+                            {service.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </li>
               )
             )}
@@ -150,24 +158,31 @@ const Navbar = () => {
                   </Link>
                 </li>
               ) : (
-                <li
-                  key="services-mobile"
-                  className="border-t border-gray-300 dark:border-gray-700 pt-2"
-                >
-                  <span className="block font-semibold mb-2">Services</span>
-                  <ul className="flex flex-col gap-2 pl-2">
-                    {servicesItems.map((service) => (
-                      <li key={service.href}>
-                        <Link
-                          href={service.href}
-                          className="block hover:text-[#4C5C88] dark:hover:text-blue-300"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          {service.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+                <li key="services-mobile" className="pt-2">
+                  <button
+                    onClick={() => setIsServicesOpen(!isServicesOpen)}
+                    className="flex items-center gap-1 font-semibold"
+                  >
+                    Services <FaChevronDown className="text-xs" />
+                  </button>
+                  {isServicesOpen && (
+                    <ul className="flex flex-col gap-2 pl-2 mt-2">
+                      {servicesItems.map((service) => (
+                        <li key={service.href}>
+                          <Link
+                            href={service.href}
+                            className="block hover:text-[#4C5C88] dark:hover:text-blue-300"
+                            onClick={() => {
+                              setIsMenuOpen(false);
+                              setIsServicesOpen(false);
+                            }}
+                          >
+                            {service.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </li>
               )
             )}
