@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import { FaChevronDown } from 'react-icons/fa'; // dropdown icon
 import { HiMenu, HiX } from 'react-icons/hi';
 import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md';
 import ThemeToggle from './ThemeToggle';
@@ -12,6 +13,7 @@ const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false); // dropdown state
 
   // Sticky navbar
   useEffect(() => {
@@ -33,8 +35,8 @@ const Navbar = () => {
     { label: 'Our Team', href: '/team' },
     { label: 'Projects', href: '/projects' },
     { label: 'Blog', href: '/blog' },
-
-    { label: 'Contact Us', href: '/contact' },
+    { label: 'Services', href: '/services' }, // Services age
+    { label: 'Contact Us', href: '/contact' }, // Contact last
   ];
 
   const servicesItems = [
@@ -66,47 +68,46 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6">
           <ul className="flex gap-6 text-base font-medium text-gray-800 dark:text-white">
-            {navItems.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className={`hover:text-[#4C5C88] dark:hover:text-blue-300 transition ${
-                    pathname === item.href ? 'font-semibold underline' : ''
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-
-            {/* Services Dropdown */}
-            <li className="relative group cursor-pointer">
-              <span className="hover:text-[#4C5C88] dark:hover:text-blue-300">
-                Services
-              </span>
-              <ul className="absolute hidden group-hover:flex flex-col top-full mt-2 bg-white dark:bg-gray-800 shadow-lg rounded w-56 p-2">
-                {servicesItems.map((service) => (
-                  <li key={service.href}>
-                    <Link
-                      href={service.href}
-                      className="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
-                    >
-                      {service.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </li>
+            {navItems.map((item) =>
+              item.label !== 'Services' ? (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className={`hover:text-[#4C5C88] dark:hover:text-blue-300 transition ${
+                      pathname === item.href ? 'font-semibold underline' : ''
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ) : (
+                // Services Dropdown (Click to open)
+                <li key="services" className="relative">
+                  <button
+                    onClick={() => setIsServicesOpen(!isServicesOpen)}
+                    className="flex items-center gap-1 hover:text-[#4C5C88] dark:hover:text-blue-300"
+                  >
+                    Services <FaChevronDown className="text-xs" />
+                  </button>
+                  {isServicesOpen && (
+                    <ul className="absolute top-full mt-2 bg-white dark:bg-gray-800 shadow-lg rounded w-56 p-2 z-50">
+                      {servicesItems.map((service) => (
+                        <li key={service.href}>
+                          <Link
+                            href={service.href}
+                            className="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded"
+                            onClick={() => setIsServicesOpen(false)} // close after click
+                          >
+                            {service.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              )
+            )}
           </ul>
-
-          {/* Dark mode toggle */}
-          {/* <button
-            onClick={() => setIsDarkMode(!isDarkMode)}
-            className="text-2xl text-gray-700 dark:text-gray-300 hover:scale-110 transition"
-          >
-            {isDarkMode ? <MdOutlineLightMode /> : <MdOutlineDarkMode />}
-          </button> */}
-          <ThemeToggle></ThemeToggle>
 
           {/* CTA Button */}
           <Link href="/services">
@@ -114,6 +115,9 @@ const Navbar = () => {
               Build With Us
             </button>
           </Link>
+
+          {/* Theme Toggle (Last Item) */}
+          <ThemeToggle />
         </div>
 
         {/* Mobile Toggle */}
@@ -140,37 +144,48 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 shadow-lg">
           <ul className="flex flex-col gap-4 px-6 py-4 text-gray-800 dark:text-white">
-            {navItems.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className={`block hover:text-[#4C5C88] dark:hover:text-blue-300 ${
-                    pathname === item.href ? 'font-semibold underline' : ''
-                  }`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-
-            {/* Services submenu (Mobile) */}
-            <li className="border-t border-gray-300 dark:border-gray-700 pt-2">
-              <span className="block font-semibold mb-2">Services</span>
-              <ul className="flex flex-col gap-2 pl-2">
-                {servicesItems.map((service) => (
-                  <li key={service.href}>
-                    <Link
-                      href={service.href}
-                      className="block hover:text-[#4C5C88] dark:hover:text-blue-300"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {service.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </li>
+            {navItems.map((item) =>
+              item.label !== 'Services' ? (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className={`block hover:text-[#4C5C88] dark:hover:text-blue-300 ${
+                      pathname === item.href ? 'font-semibold underline' : ''
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ) : (
+                <li key="services-mobile" className="pt-2">
+                  <button
+                    onClick={() => setIsServicesOpen(!isServicesOpen)}
+                    className="flex items-center gap-1 font-semibold"
+                  >
+                    Services <FaChevronDown className="text-xs" />
+                  </button>
+                  {isServicesOpen && (
+                    <ul className="flex flex-col gap-2 pl-2 mt-2">
+                      {servicesItems.map((service) => (
+                        <li key={service.href}>
+                          <Link
+                            href={service.href}
+                            className="block hover:text-[#4C5C88] dark:hover:text-blue-300"
+                            onClick={() => {
+                              setIsMenuOpen(false);
+                              setIsServicesOpen(false);
+                            }}
+                          >
+                            {service.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              )
+            )}
 
             {/* CTA Button */}
             <li>
