@@ -84,9 +84,9 @@ const Achievements = () => {
         data-aos="fade-up"
         data-aos-delay="100"
       >
-        <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
+        <h2 className="text-3xl md:text-5xl font-extrabold mb-4">
           OUR{' '}
-          <span className="text-blue-600 dark:text-rose-400">SUCCESSFUL</span>{' '}
+          <span className="text-blue-600 dark:text-blue-500">SUCCESSFUL</span>{' '}
           ACHIEVEMENTS
         </h2>
         <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
@@ -94,7 +94,10 @@ const Achievements = () => {
           strategies. From concept to launch, we deliver digital excellence that
           drives measurable results and builds long-term client relationships.
         </p>
-        <button className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-rose-400 hover:text-white transition font-medium">
+        <button className="inline-flex items-center gap-2  text-white
+               bg-blue-500
+               hover:bg-blue-700 hover:text-white transition-all duration-300 ease-in-out
+               text-sm sm:text-base px-6 py-3 rounded-full font-medium">
           Explore More <FaArrowRight />
         </button>
       </div>

@@ -23,7 +23,7 @@ const LogoCarousel = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* Title */}
         <div className="flex flex-col items-center gap-2 mb-12">
-          <h2 className="text-3xl font-semibold text-black dark:text-white text-center">
+          <h2 className="text-3xl font-bold md:text-4xl text-black dark:text-white text-center">
             We Work With <span className="text-blue-700">Modern</span> Tools & Platforms
           </h2>
         </div>

@@ -39,9 +39,8 @@ const services = [
     desc: "End-to-end ecommerce solutions including Shopify, WooCommerce, and custom carts.",
   },
   {
-    title: "Digital Marketing",
+    title: "AI/ML Upcomming",
     icon: FaChartLine,
-    desc: "Grow your digital presence with SEO, Ads, Analytics, and smart marketing funnels.",
   },
 ];
 
@@ -58,11 +57,11 @@ const Services = () => {
       <div className="container mx-auto px-6 md:px-12 lg:px-20">
         {/* Section Title */}
         <div className="text-center mb-12" data-aos="fade-up">
-          <p className="text-primary font-semibold uppercase tracking-wider">
+          <p className="text-black dark:text-gray-300 font-semibold uppercase tracking-wider">
             Our Services
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mt-2">
-            What We Offer
+            What We <span className="text-blue-700 dark:text-blue-500">Offer</span>
           </h2>
           <p className="mt-4 text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
             From development to marketing — we provide complete digital solutions
@@ -82,7 +81,7 @@ const Services = () => {
                 data-aos-delay={index * 100}
               >
                 <div className="text-primary mb-4">
-                  <Icon size={30} />
+                  <Icon className="dark:text-blue-500 text-blue-600" size={30} />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                   {service.title}

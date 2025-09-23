@@ -17,7 +17,7 @@ const AboutUs = () => {
       <div className="container mx-auto px-6 md:px-12 lg:px-20">
         {/* Section Title */}
         <div className="text-center mb-12" data-aos="fade-up">
-          <p className="text-primary font-semibold uppercase tracking-wider">
+          <p className="text-black dark:text-gray-300 font-semibold uppercase tracking-wider">
             Welcome to NeuroDevs
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white leading-tight mt-2">
@@ -34,7 +34,7 @@ const AboutUs = () => {
           >
             <p>
               At{" "}
-              <span className="font-semibold text-primary">NeuroDevs</span>, we
+              <span className="font-semibold text-blue-700">NeuroDevs</span>, we
               combine clean code with cutting-edge creativity to deliver fast,
               responsive, and future-ready websites. Whether you're a startup,
               small business, or enterprise — our team of specialists helps turn
@@ -47,7 +47,7 @@ const AboutUs = () => {
 
             {/* Why Choose Us Points */}
             <div className="space-y-4">
-              <div className="border-l-4 border-primary pl-4">
+              <div className="border-l-4 border-blue-700 pl-4">
                 <h4 className="text-xl font-semibold">
                   01 — Strategic Digital Execution
                 </h4>
@@ -56,7 +56,7 @@ const AboutUs = () => {
                   with your business goals.
                 </p>
               </div>
-              <div className="border-l-4 border-primary pl-4">
+              <div className="border-l-4 border-blue-700 pl-4">
                 <h4 className="text-xl font-semibold">
                   02 — Smart Talent, Smarter Output
                 </h4>
