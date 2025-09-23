@@ -7,13 +7,13 @@ const EvaluateProject = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 transition-colors">
+    <section className="py-20 bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-900 transition-colors">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 px-4">
         
         {/* Left Content */}
         <div className="md:w-1/2 text-center md:text-left">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
-           Share Your Idea, We’ll Make It <span className="text-blue-700">Reality</span>
+            Share Your Idea, We’ll Make It <span className="text-blue-700">Reality</span>
           </h2>
           <p className="mt-4 text-gray-700 dark:text-gray-300 text-lg">
             Leave your details and we will contact you <span className="text-blue-500">shortly</span>
