@@ -16,57 +16,57 @@ const teamMembers = [
     name: "Jihad Alom",
     role: "Frontend Web Developer",
     img: "/Jihad Alom.jpg",
-    linkedin: "#",
-    github: "#",
-    facebook: "#",
+    linkedin: "https://www.linkedin.com/",
+    github: "https://github.com/",
+    facebook: "https://facebook.com/",
   },
   {
     name: "RA Danil",
     role: "Webflow Developer",
     img: "/RA Danil.jpg",
-    linkedin: "#",
-    github: "#",
-    facebook: "#",
+    linkedin: "https://www.linkedin.com/",
+    github: "https://github.com/",
+    facebook: "https://facebook.com/",
   },
   {
     name: "Jannatul Lima",
     role: "MERN Stack Developer",
     img: "/Jannatul Lima.jpg",
-    linkedin: "#",
-    github: "#",
-    facebook: "#",
+    linkedin: "https://www.linkedin.com/",
+    github: "https://github.com/",
+    facebook: "https://facebook.com/",
   },
   {
     name: "Purba Talukdar",
     role: "Marketing Manager",
     img: "/Purba Talukdar.png",
-    linkedin: "#",
-    github: "#",
-    facebook: "#",
+    linkedin: "https://www.linkedin.com/",
+    github: "https://github.com/",
+    facebook: "https://facebook.com/",
   },
   {
     name: "Sammi Islam",
     role: "UI UX Designer",
     img: "/Nusrat Fariha.png",
-    linkedin: "#",
-    github: "#",
-    facebook: "#",
+    linkedin: "https://www.linkedin.com/",
+    github: "https://github.com/",
+    facebook: "https://facebook.com/",
   },
   {
-    name: "Shanta Islam ",
+    name: "Shanta Islam",
     role: "Brand Designer",
     img: "/Nusrat Fariha.png",
-    linkedin: "#",
-    github: "#",
-    facebook: "#",
+    linkedin: "https://www.linkedin.com/",
+    github: "https://github.com/",
+    facebook: "https://facebook.com/",
   },
   {
     name: "Opu Rashed",
     role: "Motion Graphics Designer",
     img: "/Nusrat Fariha.png",
-    linkedin: "#",
-    github: "#",
-    facebook: "#",
+    linkedin: "https://www.linkedin.com/",
+    github: "https://github.com/",
+    facebook: "https://facebook.com/",
   },
 ];
 
@@ -95,46 +95,80 @@ const Team = () => {
         {/* Founders Section */}
         <div className="grid sm:grid-cols-2 gap-8 mb-16" data-aos="fade-right">
           {/* Founder 1 */}
-          <div className="bg-base-200 dark:bg-gray-800 p-4 rounded-lg shadow text-center">
+          <div className="relative group rounded-lg overflow-hidden shadow">
             <Image
-              src="/team/shuvon.jpg"
+              src="/SB ShuVon.JPG"
               alt="Shuvon"
-              width={90}
-              height={90}
-              className="w-20 h-20 mx-auto rounded-full object-cover mb-3 border-2 border-primary"
+              width={400}
+              height={400}
+              className="w-full h-80 object-cover"
             />
-            <h3 className="text-lg font-bold text-gray-900 dark:text-white">
-              SB SHUVON
-            </h3>
-            <p className="text-xs text-gray-500 dark:text-gray-400">
-              Co-Founder & CEO
-            </p>
-            <div className="mt-2 flex justify-center gap-3 text-primary text-lg">
-              <Link href="#"><FaLinkedin /></Link>
-              <Link href="#"><FaGithub /></Link>
-              <Link href="#"><FaFacebook /></Link>
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-white">SB SHUVON</h3>
+              <p className="text-sm text-gray-200">Co-Founder & CEO</p>
+              <div className="mt-3 flex gap-4 text-2xl">
+                <Link
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  className="text-white hover:text-blue-400 transform hover:scale-125 transition duration-300"
+                >
+                  <FaLinkedin />
+                </Link>
+                <Link
+                  href="https://github.com/"
+                  target="_blank"
+                  className="text-white hover:text-gray-300 transform hover:scale-125 transition duration-300"
+                >
+                  <FaGithub />
+                </Link>
+                <Link
+                  href="https://facebook.com/"
+                  target="_blank"
+                  className="text-white hover:text-blue-500 transform hover:scale-125 transition duration-300"
+                >
+                  <FaFacebook />
+                </Link>
+              </div>
             </div>
           </div>
 
           {/* Founder 2 */}
-          <div className="bg-base-200 dark:bg-gray-800 p-4 rounded-lg shadow text-center">
+          <div className="relative group rounded-lg overflow-hidden shadow">
             <Image
-              src="/team/tipu.jpg"
+              src="/IMG_0546.HEIC"
               alt="Tipu"
-              width={90}
-              height={90}
-              className="w-20 h-20 mx-auto rounded-full object-cover mb-3 border-2 border-primary"
+              width={400}
+              height={400}
+              className="w-full h-80 object-cover"
             />
-            <h3 className="text-lg font-bold text-gray-900 dark:text-white">
-              Tipu Jayed
-            </h3>
-            <p className="text-xs text-gray-500 dark:text-gray-400">
-              Co-Founder & CMO
-            </p>
-            <div className="mt-2 flex justify-center gap-3 text-primary text-lg">
-              <Link href="#"><FaLinkedin /></Link>
-              <Link href="#"><FaGithub /></Link>
-              <Link href="#"><FaFacebook /></Link>
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+              <h3 className="text-xl font-bold text-white">Tipu Jayed</h3>
+              <p className="text-sm text-gray-200">Co-Founder & CMO</p>
+              <div className="mt-3 flex gap-4 text-2xl">
+                <Link
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  className="text-white hover:text-blue-400 transform hover:scale-125 transition duration-300"
+                >
+                  <FaLinkedin />
+                </Link>
+                <Link
+                  href="https://github.com/"
+                  target="_blank"
+                  className="text-white hover:text-gray-300 transform hover:scale-125 transition duration-300"
+                >
+                  <FaGithub />
+                </Link>
+                <Link
+                  href="https://facebook.com/"
+                  target="_blank"
+                  className="text-white hover:text-blue-500 transform hover:scale-125 transition duration-300"
+                >
+                  <FaFacebook />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -157,24 +191,45 @@ const Team = () => {
           >
             {teamMembers.map((member, index) => (
               <SwiperSlide key={index}>
-                <div className="bg-base-200 dark:bg-gray-800 p-6 rounded-xl shadow text-center">
+                <div className="relative group cursor-pointer overflow-hidden rounded-xl shadow-lg">
+                  {/* Image */}
                   <Image
                     src={member.img}
                     alt={member.name}
-                    width={96}
-                    height={96}
-                    className="w-24 h-24 mx-auto rounded-full object-cover mb-4 border-2 border-primary"
+                    width={400}
+                    height={400}
+                    className="w-full h-80 object-cover"
                   />
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                    {member.name}
-                  </h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
-                    {member.role}
-                  </p>
-                  <div className="mt-3 flex justify-center gap-4 text-primary text-xl">
-                    <Link href={member.linkedin}><FaLinkedin /></Link>
-                    <Link href={member.github}><FaGithub /></Link>
-                    <Link href={member.facebook}><FaFacebook /></Link>
+
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                    <h3 className="text-xl font-bold text-white">
+                      {member.name}
+                    </h3>
+                    <p className="text-sm text-gray-200">{member.role}</p>
+                    <div className="mt-3 flex gap-4 text-2xl">
+                      <Link
+                        href={member.linkedin}
+                        target="_blank"
+                        className="text-white hover:text-blue-400 transform hover:scale-125 transition duration-300"
+                      >
+                        <FaLinkedin />
+                      </Link>
+                      <Link
+                        href={member.github}
+                        target="_blank"
+                        className="text-white hover:text-gray-300 transform hover:scale-125 transition duration-300"
+                      >
+                        <FaGithub />
+                      </Link>
+                      <Link
+                        href={member.facebook}
+                        target="_blank"
+                        className="text-white hover:text-blue-500 transform hover:scale-125 transition duration-300"
+                      >
+                        <FaFacebook />
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </SwiperSlide>

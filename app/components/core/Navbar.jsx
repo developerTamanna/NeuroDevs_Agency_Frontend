@@ -58,12 +58,16 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center py-3">
         {/* Logo */}
-        <Link
-          href="/"
-          className="flex items-center md:text-3xl text-2xl font-bold font-poppins text-[#4C5C88] dark:text-white"
-        >
-          <img src="/neuro_logo.svg" alt="Logo" className="h-10 md:h-12" />
-        </Link>
+<Link
+  href="/"
+  className="flex items-center md:text-3xl text-2xl font-bold font-poppins text-[#4C5C88] dark:text-white"
+>
+  <img
+    src="/neuro_logo.svg"
+    alt="Logo"
+    className="h-10 md:h-12"
+  />
+</Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6">
@@ -111,7 +115,9 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <Link href="/services">
-            <button className="px-5 py-2 bg-[#4C5C88] text-white rounded-full hover:bg-blue-300 hover:text-black transition">
+            <button className="px-5 py-2  text-white
+               bg-blue-500
+               hover:bg-blue-700  hover:text-white  duration-300 ease-in-out rounded-full transition">
               Build With Us
             </button>
           </Link>
