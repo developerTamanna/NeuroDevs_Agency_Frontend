@@ -21,7 +21,7 @@ const AboutUs = () => {
             Welcome to NeuroDevs
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white leading-tight mt-2">
-            Top-Tier Web Development & Digital Growth Agency
+            Top-Tier Web Development & Digital <span className="text-blue-700 dark:text-blue-400">Growth</span> Agency
           </h2>
         </div>
 
@@ -34,7 +34,7 @@ const AboutUs = () => {
           >
             <p>
               At{" "}
-              <span className="font-semibold text-blue-700">NeuroDevs</span>, we
+              <span className="font-semibold text-blue-700 dark:text-blue-500">NeuroDevs</span>, we
               combine clean code with cutting-edge creativity to deliver fast,
               responsive, and future-ready websites. Whether you're a startup,
               small business, or enterprise — our team of specialists helps turn
@@ -82,11 +82,11 @@ const AboutUs = () => {
                 scalable, and sustainable.
               </p>
               <div className="mt-6">
-                <h4 className="font-bold text-primary text-lg">— SB ShuVon</h4>
+                <h4 className="font-bold text-black dark:text-white mb-2 text-lg">— SB ShuVon</h4>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   Founder & Software Engineer
                 </p>
-                <p className="text-sm">7 years of experience</p>
+                <p className="text-sm dark:text-gray-300">7 years of experience</p>
               </div>
             </div>
           </div>

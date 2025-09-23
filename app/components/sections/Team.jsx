@@ -9,7 +9,7 @@ import { FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 
 const teamMembers = [
   {
@@ -24,14 +24,6 @@ const teamMembers = [
     name: "RA Danil",
     role: "Webflow Developer",
     img: "/RA Danil.jpg",
-    linkedin: "#",
-    github: "#",
-    facebook: "#",
-  },
-  {
-    name: "IA Rafi",
-    role: "WordPress Developer",
-    img: "/team/rafi.jpg",
     linkedin: "#",
     github: "#",
     facebook: "#",
@@ -53,8 +45,24 @@ const teamMembers = [
     facebook: "#",
   },
   {
-    name: "Nusrat Fariha",
-    role: "Webflow Specialist",
+    name: "Sammi Islam",
+    role: "UI UX Designer",
+    img: "/Nusrat Fariha.png",
+    linkedin: "#",
+    github: "#",
+    facebook: "#",
+  },
+  {
+    name: "Shanta Islam ",
+    role: "Brand Designer",
+    img: "/Nusrat Fariha.png",
+    linkedin: "#",
+    github: "#",
+    facebook: "#",
+  },
+  {
+    name: "Opu Rashed",
+    role: "Motion Graphics Designer",
     img: "/Nusrat Fariha.png",
     linkedin: "#",
     github: "#",
@@ -72,11 +80,12 @@ const Team = () => {
       <div className="container mx-auto px-6 md:px-12 lg:px-20">
         {/* Section Title */}
         <div className="text-center mb-14" data-aos="fade-up">
-          <p className="text-primary font-semibold uppercase tracking-wider">
+          <p className="text-black dark:text-gray-100 font-semibold uppercase tracking-wider">
             Our Team
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mt-2">
-            Founders & Web Experts
+            Founders & Web{" "}
+            <span className="text-blue-700 dark:text-blue-400">Experts</span>
           </h2>
           <p className="mt-3 text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
             Meet the passionate people behind our success.
@@ -84,23 +93,23 @@ const Team = () => {
         </div>
 
         {/* Founders Section */}
-        <div className="grid sm:grid-cols-2 gap-10 mb-16" data-aos="fade-right">
+        <div className="grid sm:grid-cols-2 gap-8 mb-16" data-aos="fade-right">
           {/* Founder 1 */}
-          <div className="bg-base-200 dark:bg-gray-800 p-6 rounded-xl shadow text-center">
+          <div className="bg-base-200 dark:bg-gray-800 p-4 rounded-lg shadow text-center">
             <Image
               src="/team/shuvon.jpg"
               alt="Shuvon"
-              width={112}
-              height={112}
-              className="w-28 h-28 mx-auto rounded-full object-cover mb-4 border-4 border-primary"
+              width={90}
+              height={90}
+              className="w-20 h-20 mx-auto rounded-full object-cover mb-3 border-2 border-primary"
             />
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white">
               SB SHUVON
             </h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
+            <p className="text-xs text-gray-500 dark:text-gray-400">
               Co-Founder & CEO
             </p>
-            <div className="mt-3 flex justify-center gap-4 text-primary text-xl">
+            <div className="mt-2 flex justify-center gap-3 text-primary text-lg">
               <Link href="#"><FaLinkedin /></Link>
               <Link href="#"><FaGithub /></Link>
               <Link href="#"><FaFacebook /></Link>
@@ -108,21 +117,21 @@ const Team = () => {
           </div>
 
           {/* Founder 2 */}
-          <div className="bg-base-200 dark:bg-gray-800 p-6 rounded-xl shadow text-center">
+          <div className="bg-base-200 dark:bg-gray-800 p-4 rounded-lg shadow text-center">
             <Image
               src="/team/tipu.jpg"
               alt="Tipu"
-              width={112}
-              height={112}
-              className="w-28 h-28 mx-auto rounded-full object-cover mb-4 border-4 border-primary"
+              width={90}
+              height={90}
+              className="w-20 h-20 mx-auto rounded-full object-cover mb-3 border-2 border-primary"
             />
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white">
               Tipu Jayed
             </h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
+            <p className="text-xs text-gray-500 dark:text-gray-400">
               Co-Founder & CMO
             </p>
-            <div className="mt-3 flex justify-center gap-4 text-primary text-xl">
+            <div className="mt-2 flex justify-center gap-3 text-primary text-lg">
               <Link href="#"><FaLinkedin /></Link>
               <Link href="#"><FaGithub /></Link>
               <Link href="#"><FaFacebook /></Link>
@@ -130,7 +139,7 @@ const Team = () => {
           </div>
         </div>
 
-        {/* Web Experts (Slider) */}
+        {/* Web Experts (Auto Slider) */}
         <div data-aos="fade-left" className="overflow-hidden">
           <Swiper
             spaceBetween={30}
@@ -140,8 +149,11 @@ const Team = () => {
               768: { slidesPerView: 2 },
               1024: { slidesPerView: 3 },
             }}
-            navigation={true}
-            modules={[Navigation]}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            modules={[Autoplay]}
           >
             {teamMembers.map((member, index) => (
               <SwiperSlide key={index}>

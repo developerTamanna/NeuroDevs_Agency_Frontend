@@ -18,7 +18,7 @@ const Achievements = () => {
   }, []);
 
   return (
-    <section className="bg-white text-gray-900 dark:bg-gray-950 dark:text-white py-20 relative overflow-hidden transition-colors duration-500">
+    <section className="bg-white text-gray-900 dark:bg-gray-900 dark:text-white py-20 relative overflow-hidden transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
         {/* Left Image */}
         <div className="space-y-6">
@@ -70,7 +70,7 @@ const Achievements = () => {
             key={idx}
             className="border-l-4 border-blue-600 dark:border-white pl-6 py-4 rounded"
           >
-            <h3 className="text-5xl font-bold mb-2 inline-block px-2 py-1 transition duration-300 hover:bg-blue-100 dark:hover:bg-white/10 hover:text-blue-600 dark:hover:text-rose-400 rounded">
+            <h3 className="text-5xl font-bold mb-2 inline-block px-2 py-1 transition duration-300 rounded">
               {item.number}
             </h3>
             <p className="text-sm uppercase tracking-wide">{item.label}</p>
@@ -86,7 +86,7 @@ const Achievements = () => {
       >
         <h2 className="text-3xl md:text-5xl font-extrabold mb-4">
           OUR{' '}
-          <span className="text-blue-600 dark:text-blue-500">SUCCESSFUL</span>{' '}
+          <span className="text-blue-600 dark:text-blue-400">SUCCESSFUL</span>{' '}
           ACHIEVEMENTS
         </h2>
         <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
