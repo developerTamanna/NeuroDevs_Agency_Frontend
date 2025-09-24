@@ -46,9 +46,9 @@ const Projects = () => {
       <div className="container mx-auto px-6 md:px-12 lg:px-20">
         {/* Section Title */}
         <div className="text-center mb-12" data-aos="fade-up">
-          <p className="text-primary font-semibold uppercase tracking-wider">Our Works</p>
+          <p className="text-black dark:text-gray-200 font-semibold uppercase tracking-wider">Our Works</p>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mt-2">
-            Featured Projects
+            Featured <span className="text-blue-700 dark:text-blue-400">Projects</span>
           </h2>
           <p className="mt-3 text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
             A quick look at some of our recent projects across different platforms.
