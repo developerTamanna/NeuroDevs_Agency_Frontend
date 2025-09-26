@@ -1,10 +1,11 @@
-"use client";
+'use client';
+import Link from 'next/link';
 
-import { useEffect } from "react";
-import { motion } from "framer-motion";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { FaArrowRight } from "react-icons/fa";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { motion } from 'framer-motion';
+import { useEffect } from 'react';
+import { FaArrowRight } from 'react-icons/fa';
 
 const Banner = () => {
   useEffect(() => {
@@ -13,7 +14,7 @@ const Banner = () => {
 
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -43,7 +44,7 @@ const Banner = () => {
           <div className="flex gap-4 mt-6 justify-center md:justify-start">
             {/* Build with Us */}
             <button
-              onClick={() => scrollToSection("services")}
+              onClick={() => scrollToSection('services')}
               className="flex items-center justify-center gap-2
                px-6 py-3 rounded-lg font-medium
                shadow-md text-white bg-blue-500
@@ -57,20 +58,20 @@ const Banner = () => {
             </button>
 
             {/* Discover Projects */}
-            <button
-              onClick={() => scrollToSection("projects")}
+            <Link
+              href="/projects"
               className="flex items-center justify-center gap-2
-               px-6 py-3 rounded-lg font-medium
-               shadow-md text-white
-               bg-blue-500
-               hover:bg-blue-700  hover:text-white transition-all duration-300 ease-in-out
-               text-sm sm:text-base"
+             px-6 py-3 rounded-lg font-medium
+             shadow-md text-white bg-blue-500
+             hover:bg-blue-700 hover:text-white
+             transition-all duration-300 ease-in-out
+             text-sm sm:text-base"
             >
               Discover Projects
               <motion.span whileHover={{ x: 5 }} transition={{ duration: 0.3 }}>
                 <FaArrowRight />
               </motion.span>
-            </button>
+            </Link>
           </div>
         </div>
 
