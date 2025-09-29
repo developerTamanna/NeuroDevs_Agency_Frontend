@@ -62,22 +62,22 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen pt-6 pb-4 bg-gradient-to-b from-[#E0F3FF] to-white dark:from-[#1e293b] dark:to-[#0f172a] text-gray-900 dark:text-white">
       <div className="max-w-7xl mx-auto px-4 py-8">
         {/* Header Section */}
         <div className="mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4 dark:text-gray-100">
             How can we help?
           </h1>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-600 dark:text-gray-300">
             Looking for support? Chat to our friendly team 24/7.
           </p>
           <div className="flex flex-wrap gap-4 mt-4">
-            <span className="text-blue-600 font-medium">Start a live chat</span>
+            <span className="text-blue-400 font-medium">Start a live chat</span>
             <span className="text-gray-400">•</span>
-            <span className="text-blue-600 font-medium">Shoot us on email</span>
+            <span className="text-blue-400 font-medium">Shoot us on email</span>
             <span className="text-gray-400">•</span>
-            <span className="text-blue-600 font-medium">Message us on X</span>
+            <span className="text-blue-400 font-medium">Message us on X</span>
           </div>
         </div>
 
@@ -88,7 +88,7 @@ const Contact = () => {
               {/* Name Fields */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-semibold text-gray-900 mb-2">
+                  <label className="block text-sm font-semibold text-gray-900 mb-2 dark:text-gray-300">
                     First name *
                   </label>
                   <input
@@ -101,7 +101,7 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm text-gray-600 mb-2">
+                  <label className="block text-sm text-gray-600 mb-2 dark:text-gray-300">
                     Last name
                   </label>
                   <input
@@ -116,7 +116,7 @@ const Contact = () => {
 
               {/* Work Email */}
               <div>
-                <label className="block text-sm font-semibold text-gray-900 mb-2">
+                <label className="block text-sm font-semibold text-gray-900 mb-2 dark:text-gray-300">
                   Work email *
                 </label>
                 <input
@@ -132,7 +132,7 @@ const Contact = () => {
 
               {/* Number of Employees */}
               <div>
-                <label className="block text-sm font-semibold text-gray-900 mb-2">
+                <label className="block text-sm font-semibold text-gray-900 mb-2 dark:text-gray-300">
                   Number of employees *
                 </label>
                 <select
@@ -152,7 +152,7 @@ const Contact = () => {
 
               {/* Phone Number */}
               <div>
-                <label className="block text-sm font-semibold text-gray-900 mb-2">
+                <label className="block text-sm font-semibold text-gray-900 mb-2 dark:text-gray-300">
                   Phone number
                 </label>
                 <div className="flex">
@@ -174,7 +174,7 @@ const Contact = () => {
 
               {/* Products */}
               <div>
-                <label className="block text-sm font-semibold text-gray-900 mb-3">
+                <label className="block text-sm font-semibold text-gray-900 mb-3 dark:text-gray-300">
                   Which products are you interested in?
                 </label>
                 <div className="grid grid-cols-2 gap-2">
@@ -189,7 +189,7 @@ const Contact = () => {
                         onChange={() => handleProductChange(product)}
                         className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                       />
-                      <span className="text-sm text-gray-700">{product}</span>
+                      <span className="text-sm text-gray-700 dark:text-gray-300">{product}</span>
                     </label>
                   ))}
                 </div>
@@ -221,8 +221,8 @@ const Contact = () => {
           </div>
 
           {/* Map Section */}
-          <div className="bg-gray-50 rounded-lg p-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">New York</h2>
+          <div className="bg-gray-50 dark:bg-gray-700  rounded-lg p-6">
+            <h2 className="text-2xl font-bold dark:text-gray-100  text-gray-900 mb-6">Sylhet, Bangladesh</h2>
 
             {/* Map Placeholder */}
             <div className="bg-blue-100 rounded-lg h-64 mb-6 flex items-center justify-center">
@@ -233,14 +233,14 @@ const Contact = () => {
 
             {/* Locations List */}
             <div className="space-y-2">
-              <h3 className="font-semibold text-gray-900 mb-3">
+              <h3 className="font-semibold text-gray-900 mb-3 dark:text-gray-100">
                 Brooklyn Bridge
               </h3>
               <ul className="space-y-1">
                 {locations.map((location, index) => (
                   <li
                     key={index}
-                    className="text-sm text-gray-700 flex items-center"
+                    className="text-sm text-gray-700 dark:text-gray-300 flex items-center"
                   >
                     <span className="w-2 h-2 bg-gray-400 rounded-full mr-2"></span>
                     {location}
