@@ -175,7 +175,7 @@ const Marketing = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-20 bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 relative overflow-hidden"
+      className="py-20 bg-gradient-to-b from-[#E0F3FF] to-white dark:from-[#1e293b] dark:to-[#0f172a] text-gray-900 dark:text-white relative overflow-hidden"
     >
       {/* Animated Background Elements */}
       <motion.div
@@ -203,7 +203,7 @@ const Marketing = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="inline-flex items-center justify-center mb-6"
           >
-            <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-2xl shadow-purple-500/25">
+            <span className="bg-gradient-to-r bg-blue-500 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-2xl shadow-purple-500/25">
               🚀 Digital Excellence
             </span>
           </motion.div>
@@ -212,7 +212,7 @@ const Marketing = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight"
+            className="text-5xl md:text-6xl font-bold text-gray-950 dark:text-white mb-6 leading-tight"
           >
             Digital Marketing
             <motion.span
@@ -233,7 +233,7 @@ const Marketing = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
+            className="text-xl text-gray-700 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed"
           >
             Transform your digital presence with data-driven strategies that
             deliver measurable results. We combine creativity with analytics to
@@ -352,7 +352,7 @@ const Marketing = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -50, scale: 0.95 }}
             transition={{ duration: 0.6, ease: 'easeInOut' }}
-            className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-3xl backdrop-blur-xl border border-white/10 p-8 mb-16"
+            className="bg-white/85 dark:bg-gray-700 rounded-3xl border border-blue-200 backdrop-blur-xl  p-8 mb-16"
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -371,14 +371,14 @@ const Marketing = () => {
                       {services[activeService].icon}
                     </motion.span>
                     <div>
-                      <h3 className="text-4xl font-bold text-white mb-2">
+                      <h3 className="text-4xl font-bold text-black dark:text-white mb-2">
                         {services[activeService].title}
                       </h3>
                       <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full"></div>
                     </div>
                   </div>
 
-                  <p className="text-xl text-gray-300 leading-relaxed">
+                  <p className="text-xl text-gray-500 dark:text-gray-300 leading-relaxed">
                     {services[activeService].description}
                   </p>
                 </motion.div>
@@ -416,7 +416,7 @@ const Marketing = () => {
                 transition={{ duration: 0.6 }}
                 className="space-y-6"
               >
-                <h4 className="text-2xl font-bold text-white mb-6">
+                <h4 className="text-2xl font-bold text-shadow-black dark:text-white mb-6">
                   What We Deliver
                 </h4>
                 {services[activeService].features.map((feature, idx) => (
@@ -435,7 +435,7 @@ const Marketing = () => {
                         {idx + 1}
                       </span>
                     </motion.div>
-                    <span className="text-gray-200 text-lg font-medium">
+                    <span className="dark:text-gray-200 text-gray-800 text-lg font-medium">
                       {feature}
                     </span>
                   </motion.div>
@@ -504,11 +504,11 @@ const Marketing = () => {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
-                className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2"
+                className="text-3xl font-bold bg-gradient-to-r from-cyan-600 to-blue-700 bg-clip-text text-transparent mb-2"
               >
                 {stat.number}
               </motion.div>
-              <div className="text-gray-300 font-medium">{stat.label}</div>
+              <div className="text:text-gray-700 dark:text-gray-300 font-medium">{stat.label}</div>
             </motion.div>
           ))}
         </motion.div>

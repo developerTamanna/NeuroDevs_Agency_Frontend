@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { AnimatePresence, motion, useInView } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
+import { AnimatePresence, motion, useInView } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
 const WebDev = () => {
   const [activeService, setActiveService] = useState(0);
@@ -18,93 +18,93 @@ const WebDev = () => {
   const services = [
     {
       id: 1,
-      title: 'Custom Web Development',
+      title: "Custom Web Development",
       description:
-        'Tailored web solutions built with cutting-edge technologies to meet your specific business requirements.',
+        "Tailored web solutions built with cutting-edge technologies to meet your specific business requirements.",
       features: [
-        'React/Next.js Development',
-        'Responsive Design',
-        'API Integration',
-        'Performance Optimization',
+        "React/Next.js Development",
+        "Responsive Design",
+        "API Integration",
+        "Performance Optimization",
       ],
-      icon: '💻',
-      color: 'from-blue-500 to-cyan-500',
-      bgColor: 'blue',
+      icon: "💻",
+      color: "from-blue-500 to-cyan-500",
+      bgColor: "blue",
     },
     {
       id: 2,
-      title: 'E-commerce Solutions',
+      title: "E-commerce Solutions",
       description:
-        'Complete online store development with secure payment gateways and inventory management.',
+        "Complete online store development with secure payment gateways and inventory management.",
       features: [
-        'Shopify/WordPress WooCommerce',
-        'Payment Gateway Integration',
-        'Product Management',
-        'Security Implementation',
+        "Shopify/WordPress WooCommerce",
+        "Payment Gateway Integration",
+        "Product Management",
+        "Security Implementation",
       ],
-      icon: '🛒',
-      color: 'from-green-500 to-emerald-500',
-      bgColor: 'green',
+      icon: "🛒",
+      color: "from-green-500 to-emerald-500",
+      bgColor: "green",
     },
     {
       id: 3,
-      title: 'Web Application Development',
+      title: "Web Application Development",
       description:
-        'Dynamic and interactive web applications that provide exceptional user experiences.',
+        "Dynamic and interactive web applications that provide exceptional user experiences.",
       features: [
-        'Single Page Applications',
-        'Real-time Features',
-        'User Authentication',
-        'Database Design',
+        "Single Page Applications",
+        "Real-time Features",
+        "User Authentication",
+        "Database Design",
       ],
-      icon: '⚡',
-      color: 'from-purple-500 to-pink-500',
-      bgColor: 'purple',
+      icon: "⚡",
+      color: "from-purple-500 to-pink-500",
+      bgColor: "purple",
     },
     {
       id: 4,
-      title: 'API Development & Integration',
+      title: "API Development & Integration",
       description:
-        'Robust API solutions that connect your systems and streamline operations.',
+        "Robust API solutions that connect your systems and streamline operations.",
       features: [
-        'RESTful APIs',
-        'Third-party Integrations',
-        'WebSocket Implementation',
-        'API Documentation',
+        "RESTful APIs",
+        "Third-party Integrations",
+        "WebSocket Implementation",
+        "API Documentation",
       ],
-      icon: '🔗',
-      color: 'from-orange-500 to-red-500',
-      bgColor: 'orange',
+      icon: "🔗",
+      color: "from-orange-500 to-red-500",
+      bgColor: "orange",
     },
     {
       id: 5,
-      title: 'Progressive Web Apps (PWA)',
+      title: "Progressive Web Apps (PWA)",
       description:
-        'Native-like web experiences that work offline and on any device.',
+        "Native-like web experiences that work offline and on any device.",
       features: [
-        'Offline Functionality',
-        'Push Notifications',
-        'App-like Experience',
-        'Cross-platform Compatibility',
+        "Offline Functionality",
+        "Push Notifications",
+        "App-like Experience",
+        "Cross-platform Compatibility",
       ],
-      icon: '📱',
-      color: 'from-indigo-500 to-blue-500',
-      bgColor: 'indigo',
+      icon: "📱",
+      color: "from-indigo-500 to-blue-500",
+      bgColor: "indigo",
     },
     {
       id: 6,
-      title: 'Website Maintenance & Support',
+      title: "Website Maintenance & Support",
       description:
-        'Ongoing support and maintenance to keep your website running smoothly.',
+        "Ongoing support and maintenance to keep your website running smoothly.",
       features: [
-        'Regular Updates',
-        'Security Monitoring',
-        'Bug Fixes',
-        'Performance Tuning',
+        "Regular Updates",
+        "Security Monitoring",
+        "Bug Fixes",
+        "Performance Tuning",
       ],
-      icon: '🔧',
-      color: 'from-gray-600 to-gray-800',
-      bgColor: 'gray',
+      icon: "🔧",
+      color: "from-gray-600 to-gray-800",
+      bgColor: "gray",
     },
   ];
 
@@ -118,27 +118,19 @@ const WebDev = () => {
     },
   };
 
-  const itemVariants = {
+  // ✅ entry animation + hover effect merge করে final variants
+  const cardVariants = {
     hidden: { y: 50, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: 'easeOut',
-      },
+      transition: { duration: 0.6, ease: "easeOut" },
     },
-  };
-
-  const cardHoverVariants = {
     rest: { scale: 1, y: 0 },
     hover: {
       scale: 1.05,
       y: -10,
-      transition: {
-        duration: 0.3,
-        ease: 'easeInOut',
-      },
+      transition: { duration: 0.3, ease: "easeInOut" },
     },
   };
 
@@ -188,77 +180,28 @@ const WebDev = () => {
         <motion.div
           variants={containerVariants}
           initial="hidden"
-          animate={isVisible ? 'visible' : 'hidden'}
+          animate={isVisible ? "visible" : "hidden"}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
           {services.map((service, index) => (
             <motion.div
               key={service.id}
-              variants={itemVariants}
+              variants={cardVariants}
+              initial="hidden"
+              animate="visible"
               whileHover="hover"
-              initial="rest"
-              animate="rest"
-              variants={cardHoverVariants}
+              whileTap="rest"
               className={`bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 overflow-hidden cursor-pointer ${
-                activeService === index ? 'ring-2 ring-blue-500' : ''
+                activeService === index ? "ring-2 ring-blue-500" : ""
               }`}
               onClick={() => setActiveService(index)}
             >
-              <div
-                className={`p-6 bg-gradient-to-r ${service.color} text-white`}
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-3xl">{service.icon}</span>
-                  <motion.div
-                    whileHover={{ rotate: 360 }}
-                    transition={{ duration: 0.5 }}
-                    className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
-                  >
-                    <svg
-                      className="w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M14 5l7 7m0 0l-7 7m7-7H3"
-                      />
-                    </svg>
-                  </motion.div>
-                </div>
-                <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-              </div>
               <div className="p-6">
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300">
                   {service.description}
                 </p>
-                <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (
-                    <motion.li
-                      key={idx}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5, delay: idx * 0.1 }}
-                      className="flex items-center text-sm text-gray-700 dark:text-gray-200"
-                    >
-                      <svg
-                        className="w-4 h-4 text-green-500 mr-2"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      {feature}
-                    </motion.li>
-                  ))}
-                </ul>
               </div>
             </motion.div>
           ))}
@@ -297,7 +240,7 @@ const WebDev = () => {
                   transition={{
                     duration: 2,
                     repeat: Infinity,
-                    repeatType: 'reverse',
+                    repeatType: "reverse",
                   }}
                   className="text-6xl opacity-20"
                 >
@@ -381,7 +324,7 @@ const WebDev = () => {
                 <motion.button
                   whileHover={{
                     scale: 1.05,
-                    boxShadow: '0 10px 30px -10px rgba(59, 130, 246, 0.5)',
+                    boxShadow: "0 10px 30px -10px rgba(59, 130, 246, 0.5)",
                   }}
                   whileTap={{ scale: 0.95 }}
                   className={`bg-gradient-to-r ${services[activeService].color} text-white px-8 py-4 rounded-lg font-semibold text-lg`}
@@ -401,10 +344,10 @@ const WebDev = () => {
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16"
         >
           {[
-            { number: '200+', label: 'Projects Completed' },
-            { number: '98%', label: 'Client Satisfaction' },
-            { number: '24/7', label: 'Support Available' },
-            { number: '5+', label: 'Years Experience' },
+            { number: "200+", label: "Projects Completed" },
+            { number: "98%", label: "Client Satisfaction" },
+            { number: "24/7", label: "Support Available" },
+            { number: "5+", label: "Years Experience" },
           ].map((stat, index) => (
             <motion.div
               key={index}
