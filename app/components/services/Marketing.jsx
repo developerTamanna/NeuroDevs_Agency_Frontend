@@ -175,7 +175,7 @@ const Marketing = () => {
   return (
     <section
       ref={sectionRef}
-      className="py-20 bg-gradient-to-b from-[#E0F3FF] to-white dark:from-[#1e293b] dark:to-[#0f172a] text-gray-900 dark:text-white relative overflow-hidden"
+      className="py-20 bg-gradient-to-br from-gray-100 via-white to-gray-200 dark:from-gray-900 dark:via-purple-900 dark:to-blue-900 relative overflow-hidden"
     >
       {/* Animated Background Elements */}
       <motion.div
@@ -212,7 +212,7 @@ const Marketing = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-5xl md:text-6xl font-bold text-gray-950 dark:text-white mb-6 leading-tight"
+            className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight"
           >
             Digital Marketing
             <motion.span
@@ -233,7 +233,7 @@ const Marketing = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="text-xl text-gray-700 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed"
+            className="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed"
           >
             Transform your digital presence with data-driven strategies that
             deliver measurable results. We combine creativity with analytics to
@@ -378,7 +378,7 @@ const Marketing = () => {
                     </div>
                   </div>
 
-                  <p className="text-xl text-gray-500 dark:text-gray-300 leading-relaxed">
+                  <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
                     {services[activeService].description}
                   </p>
                 </motion.div>
@@ -396,12 +396,12 @@ const Marketing = () => {
                         initial={{ opacity: 0, scale: 0 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.5, delay: 0.3 + idx * 0.1 }}
-                        className="text-center p-4 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10"
+                        className="text-center p-4 bg-gray-100/60 dark:bg-white/5 rounded-xl backdrop-blur-sm border border-gray-300 dark:border-white/10"
                       >
                         <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                           {value}
                         </div>
-                        <div className="text-gray-400 text-sm capitalize mt-1">
+                        <div className="text-gray-600 dark:text-gray-400 text-sm capitalize mt-1">
                           {key.replace(/([A-Z])/g, ' $1')}
                         </div>
                       </motion.div>
@@ -416,7 +416,7 @@ const Marketing = () => {
                 transition={{ duration: 0.6 }}
                 className="space-y-6"
               >
-                <h4 className="text-2xl font-bold text-shadow-black dark:text-white mb-6">
+                <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
                   What We Deliver
                 </h4>
                 {services[activeService].features.map((feature, idx) => (
@@ -425,7 +425,7 @@ const Marketing = () => {
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: idx * 0.1 }}
-                    className="flex items-center p-4 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 group"
+                    className="flex items-center p-4 bg-gray-100/70 dark:bg-white/5 rounded-xl backdrop-blur-sm border border-gray-300 dark:border-white/10 hover:bg-gray-200 dark:hover:bg-white/10 transition-all duration-300 group"
                   >
                     <motion.div
                       whileHover={{ scale: 1.1 }}
@@ -453,17 +453,6 @@ const Marketing = () => {
               <motion.button
                 whileHover={{
                   scale: 1.05,
-                  background: `linear-gradient(135deg, ${
-                    services[activeService].color
-                      .replace('from-', '')
-                      .replace('to-', '')
-                      .split(' ')[0]
-                  }, ${
-                    services[activeService].color
-                      .replace('from-', '')
-                      .replace('to-', '')
-                      .split(' ')[1]
-                  })`,
                 }}
                 whileTap={{ scale: 0.95 }}
                 className={`bg-gradient-to-r ${services[activeService].color} text-white px-12 py-4 rounded-2xl font-bold text-lg shadow-2xl shadow-${services[activeService].bgColor}-500/25 hover:shadow-${services[activeService].bgColor}-500/40 transition-all duration-300`}
@@ -491,7 +480,7 @@ const Marketing = () => {
             <motion.div
               key={index}
               whileHover={{ scale: 1.05, y: -5 }}
-              className="text-center p-8 bg-gradient-to-br from-white/10 to-white/5 rounded-2xl backdrop-blur-lg border border-white/10 hover:border-white/20 transition-all duration-300"
+              className="text-center p-8 bg-gray-100/70 dark:bg-gradient-to-br dark:from-white/10 dark:to-white/5 rounded-2xl backdrop-blur-lg border border-gray-300 dark:border-white/10 hover:border-gray-400 dark:hover:border-white/20 transition-all duration-300"
             >
               <motion.div
                 variants={pulseAnimation}
@@ -508,7 +497,9 @@ const Marketing = () => {
               >
                 {stat.number}
               </motion.div>
-              <div className="text:text-gray-700 dark:text-gray-300 font-medium">{stat.label}</div>
+              <div className="text-gray-800 dark:text-gray-300 font-medium">
+                {stat.label}
+              </div>
             </motion.div>
           ))}
         </motion.div>
