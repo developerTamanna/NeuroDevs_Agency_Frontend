@@ -18,7 +18,7 @@ const Banner = () => {
   };
 
   return (
-    <section className=" bg-gradient-to-b from-[#E0F3FF] to-white dark:from-[#1e293b] dark:to-[#0f172a] text-gray-900 dark:text-white">
+    <section className="bg-gradient-to-b from-[#E0F3FF] to-white dark:from-[#1e293b] dark:to-[#0f172a] text-gray-900 dark:text-white">
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-20 py-12 md:py-20 flex flex-col-reverse lg:flex-row items-center justify-between gap-8">
         {/* Left Text Section */}
         <div

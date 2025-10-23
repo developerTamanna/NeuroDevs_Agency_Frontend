@@ -203,7 +203,7 @@ const Marketing = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="inline-flex items-center justify-center mb-6"
           >
-            <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-2xl shadow-purple-500/25">
+            <span className="bg-gradient-to-r bg-blue-500 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-2xl shadow-purple-500/25">
               🚀 Digital Excellence
             </span>
           </motion.div>
@@ -352,7 +352,7 @@ const Marketing = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -50, scale: 0.95 }}
             transition={{ duration: 0.6, ease: 'easeInOut' }}
-            className="bg-gradient-to-br from-gray-100/70 to-white/70 dark:from-gray-800/50 dark:to-gray-900/50 rounded-3xl backdrop-blur-xl border border-gray-200 dark:border-white/10 p-8 mb-16"
+            className="bg-white/85 dark:bg-gray-700 rounded-3xl border border-blue-200 backdrop-blur-xl  p-8 mb-16"
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -371,7 +371,7 @@ const Marketing = () => {
                       {services[activeService].icon}
                     </motion.span>
                     <div>
-                      <h3 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
+                      <h3 className="text-4xl font-bold text-black dark:text-white mb-2">
                         {services[activeService].title}
                       </h3>
                       <div className="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full"></div>
@@ -435,7 +435,7 @@ const Marketing = () => {
                         {idx + 1}
                       </span>
                     </motion.div>
-                    <span className="text-gray-800 dark:text-gray-200 text-lg font-medium">
+                    <span className="dark:text-gray-200 text-gray-800 text-lg font-medium">
                       {feature}
                     </span>
                   </motion.div>
@@ -493,7 +493,7 @@ const Marketing = () => {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
-                className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2"
+                className="text-3xl font-bold bg-gradient-to-r from-cyan-600 to-blue-700 bg-clip-text text-transparent mb-2"
               >
                 {stat.number}
               </motion.div>
