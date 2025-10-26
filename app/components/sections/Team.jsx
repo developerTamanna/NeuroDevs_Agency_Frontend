@@ -99,132 +99,106 @@ const Team = () => {
           </p>
         </div>
 
-        {/* Founders Section - UPDATED FOR BETTER IMAGE DISPLAY */}
+        {/* Founders Section */}
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-24">
-          {/* Founder 1 - SB SHUVON */}
+          {/* Founder 1 */}
           <div className="group" data-aos="fade-right">
-            <div className="relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-xl hover:shadow-2xl transition-all duration-500">
-              <div className="relative h-[500px] lg:h-[600px] overflow-hidden">
-                <div className="relative w-full h-full">
-                  <Image
-                    src="/SB ShuVon.JPG"
-                    alt="SB SHUVON - Co-Founder & CEO"
-                    fill
-                    className="object-contain "
-                    priority
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    style={{
-                      objectPosition:
-                        'top center' /* Ensure head is fully visible */,
-                      transform:
-                        'scale(1.05)' /* Slight zoom to fill space nicely */,
-                    }}
-                  />
-                </div>
-
-                {/* Enhanced Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-
-                {/* Content Overlay */}
-                <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                  <div className="transform translate-y-0 group-hover:translate-y-[-10px] transition-transform duration-500">
-                    <div className="flex items-end justify-between">
-                      <div className="flex-1">
-                        <h3 className="text-2xl lg:text-3xl font-bold mb-2">
-                          SB SHUVON
-                        </h3>
-                        <p className="text-blue-200 font-medium text-lg">
-                          Co-Founder & CEO
-                        </p>
-                        <p className="text-gray-300 mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                          Visionary leader driving innovation and growth
-                        </p>
-                      </div>
-                      <div className="flex gap-3 text-xl">
-                        <Link
-                          href="https://www.linkedin.com/"
-                          target="_blank"
-                          className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-blue-600 hover:scale-110 transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0"
-                          style={{ transitionDelay: '100ms' }}
-                        >
-                          <FaLinkedin />
-                        </Link>
-                        <Link
-                          href="https://github.com/"
-                          target="_blank"
-                          className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-gray-800 hover:scale-110 transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0"
-                          style={{ transitionDelay: '200ms' }}
-                        >
-                          <FaGithub />
-                        </Link>
-                      </div>
-                    </div>
+            <div className="relative bg-white dark:bg-gray-800 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden">
+              <div className="relative h-[500px] lg:h-[600px] flex items-center justify-center">
+                <div className="absolute inset-0 flex items-center justify-center p-6">
+                  <div className="relative w-full h-full max-w-[90%] max-h-[90%] rounded-2xl overflow-hidden">
+                    <Image
+                      src="/SB ShuVon.JPG"
+                      alt="SB SHUVON - Co-Founder & CEO"
+                      fill
+                      className="object-cover object-top rounded-2xl"
+                      priority
+                    />
                   </div>
                 </div>
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent rounded-3xl" />
+
+                <div className="absolute bottom-0 left-0 right-0 p-8 text-white z-20">
+                  <h3 className="text-2xl lg:text-3xl font-bold mb-2">
+                    SB SHUVON
+                  </h3>
+                  <p className="text-blue-200 font-medium text-lg">
+                    Co-Founder & CEO
+                  </p>
+                  <p className="text-gray-300 mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    Visionary leader driving innovation and growth
+                  </p>
+                  <div className="flex gap-3 text-xl mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <Link
+                      href="https://www.linkedin.com/"
+                      target="_blank"
+                      className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-blue-600 transition-all duration-300"
+                    >
+                      <FaLinkedin />
+                    </Link>
+                    <Link
+                      href="https://github.com/"
+                      target="_blank"
+                      className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-gray-800 transition-all duration-300"
+                    >
+                      <FaGithub />
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="absolute inset-0 rounded-3xl border-2 border-white/10 group-hover:border-white/20 transition-all duration-500" />
               </div>
             </div>
           </div>
 
-          {/* Founder 2 - Tipu Jayed */}
+          {/* Founder 2 */}
           <div className="group" data-aos="fade-left">
-            <div className="relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-xl hover:shadow-2xl transition-all duration-500">
-              <div className="relative h-[500px] lg:h-[600px] overflow-hidden">
-                <div className="relative w-full h-full">
-                  <Image
-                    src="/IMG_0546.HEIC"
-                    alt="Tipu Jayed - Co-Founder & CMO"
-                    fill
-                    className="object-contain"
-                    priority
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    style={{
-                      objectPosition:
-                        'top center' /* Ensure head is fully visible */,
-                      transform:
-                        'scale(1.05)' /* Slight zoom to fill space nicely */,
-                    }}
-                  />
-                </div>
-
-                {/* Enhanced Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-
-                {/* Content Overlay */}
-                <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                  <div className="transform translate-y-0 group-hover:translate-y-[-10px] transition-transform duration-500">
-                    <div className="flex items-end justify-between">
-                      <div className="flex-1">
-                        <h3 className="text-2xl lg:text-3xl font-bold mb-2">
-                          Tipu Jayed
-                        </h3>
-                        <p className="text-blue-200 font-medium text-lg">
-                          Co-Founder & CMO
-                        </p>
-                        <p className="text-gray-300 mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                          Marketing strategist and business growth expert
-                        </p>
-                      </div>
-                      <div className="flex gap-3 text-xl">
-                        <Link
-                          href="https://www.linkedin.com/"
-                          target="_blank"
-                          className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-blue-600 hover:scale-110 transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0"
-                          style={{ transitionDelay: '100ms' }}
-                        >
-                          <FaLinkedin />
-                        </Link>
-                        <Link
-                          href="https://github.com/"
-                          target="_blank"
-                          className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-gray-800 hover:scale-110 transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0"
-                          style={{ transitionDelay: '200ms' }}
-                        >
-                          <FaGithub />
-                        </Link>
-                      </div>
-                    </div>
+            <div className="relative bg-white dark:bg-gray-800 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden">
+              <div className="relative h-[500px] lg:h-[600px] flex items-center justify-center">
+                <div className="absolute inset-0 flex items-center justify-center p-6">
+                  <div className="relative w-full h-full max-w-[90%] max-h-[90%] rounded-2xl overflow-hidden">
+                    <Image
+                      src="/IMG_0546.HEIC"
+                      alt="Tipu Jayed - Co-Founder & CMO"
+                      fill
+                      className="object-cover object-top rounded-2xl"
+                      priority
+                    />
                   </div>
                 </div>
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent rounded-3xl" />
+
+                <div className="absolute bottom-0 left-0 right-0 p-8 text-white z-20">
+                  <h3 className="text-2xl lg:text-3xl font-bold mb-2">
+                    Tipu Jayed
+                  </h3>
+                  <p className="text-blue-200 font-medium text-lg">
+                    Co-Founder & CMO
+                  </p>
+                  <p className="text-gray-300 mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    Marketing strategist and business growth expert
+                  </p>
+                  <div className="flex gap-3 text-xl mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <Link
+                      href="https://www.linkedin.com/"
+                      target="_blank"
+                      className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-blue-600 transition-all duration-300"
+                    >
+                      <FaLinkedin />
+                    </Link>
+                    <Link
+                      href="https://github.com/"
+                      target="_blank"
+                      className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-gray-800 transition-all duration-300"
+                    >
+                      <FaGithub />
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="absolute inset-0 rounded-3xl border-2 border-white/10 group-hover:border-white/20 transition-all duration-500" />
               </div>
             </div>
           </div>
@@ -271,15 +245,15 @@ const Team = () => {
             {teamMembers.map((member, index) => (
               <SwiperSlide key={index}>
                 <div className="group relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-700">
-                  <div className="relative h-80 overflow-hidden">
+                  <div className="relative h-80 overflow-hidden rounded-2xl">
                     <Image
                       src={member.img}
                       alt={member.name}
                       fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-700"
+                      className="object-cover group-hover:scale-110 transition-transform duration-700 rounded-2xl"
                     />
 
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl">
                       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-3">
                         <Link
                           href={member.linkedin}
@@ -306,7 +280,7 @@ const Team = () => {
                     </div>
                   </div>
 
-                  <div className="p-6">
+                  <div className="p-6 text-center">
                     <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                       {member.name}
                     </h4>
